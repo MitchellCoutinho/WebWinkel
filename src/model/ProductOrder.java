@@ -1,7 +1,9 @@
 package model;
 
+import bestel.Product;
+
 public class ProductOrder {
-	private String product;
+	private Product product;
 	private int count;
 
 	public int getCount() {
@@ -12,11 +14,11 @@ public class ProductOrder {
 		this.count = count;
 	}
 
-	public String getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(String product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 }
