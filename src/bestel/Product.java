@@ -4,11 +4,11 @@ import Constants.Constants;
 
 public abstract class Product {
 	
-	protected static String name;
-	protected static int totalPrice;
-	protected static int pricePerUnit;
-	protected static int unit;
-	protected static String imageURL;
+	protected String name;
+	protected int totalPrice;
+	protected int pricePerUnit;
+	protected int unit;
+	protected String imageURL;
 	
 	abstract String getName();
 	abstract int getUnit();
