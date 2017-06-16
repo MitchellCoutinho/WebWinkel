@@ -3,13 +3,12 @@ package bestel;
 import Constants.Constants;
 
 public abstract class Product {
-	// NOTE: fields may be
 	
-	private static String name;
-	private static int totalPrice;
-	private static int pricePerUnit;
-	private static int unit;
-	private static String imageUrl;
+	protected static String name;
+	protected static int totalPrice;
+	protected static int pricePerUnit;
+	protected static int unit;
+	protected static String imageURL;
 	
 	abstract String getName();
 	abstract int getUnit();
@@ -28,7 +27,7 @@ public abstract class Product {
 	public Product(String name, int pricePerUnit, String imageUrl, int unit) {
 		this.name = name;
 		this.pricePerUnit = pricePerUnit;
-		this.imageUrl = imageUrl;
+		this.imageURL = imageUrl;
 		this.unit = unit;
 	}
 	
