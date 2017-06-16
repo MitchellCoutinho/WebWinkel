@@ -12,7 +12,6 @@ public abstract class Product {
 	private static String imageUrl;
 	
 	abstract String getName();
-	abstract int getPrice();
 	abstract int getUnit();
 	abstract int getPricePerUnit();
 	abstract String getImageURL();
