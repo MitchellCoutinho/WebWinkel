@@ -6,9 +6,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title> Geen titel</title>
 </head>
 <body>
+
+<% 
+StringBuilder sb = new StringBuilder();
+java.util.Enumeration<String> en = request.getAttributeNames();
+String outp = "asd";
+
+for (int i = 0; i < 2; i++)  {
+	sb.append("<tr>")
+	.append("<td>")
+	.append(outp)
+	.append("</td>")
+	.append("</tr>");
+}
+	%>
+	<table>
+	<%= sb.toString() %>
+	</table>
+
+<form method="post" action="">
+Kies je lievelingskleur: <input type="color" name="kleur"><br>
+Hoe oud ben je: <input type="number" name = "leeftijd"> <br>
+<input type="submit">
+
+</form>
 
 </body>
 </html>

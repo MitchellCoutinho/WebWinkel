@@ -2,6 +2,7 @@ package web;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,8 +26,15 @@ public class Index extends HttpServlet {
 		assortment.add(new DefaultProduct("Cat food", 100, "https://img.chewy.com/is/catalog/99967_MAIN._AC_SS190_V1462999359_.jpg"));
 		
 		request.setAttribute("products", assortment);
+		request.setAttribute("numberOfProducts", assortment.size());
+		
 		request.getRequestDispatcher("/WEB-INF/NewFile.jsp").forward(request, response);
 	}
 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String kleur = request.getParameter("kleur");
+		String leeftijd = request.getParameter("leeftijd");
+		System.out.println(kleur + " " + leeftijd);
+	}
 
 }
